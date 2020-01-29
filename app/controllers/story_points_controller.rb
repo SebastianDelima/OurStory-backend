@@ -1,0 +1,2 @@
+class StoryPointsController < ApplicationController
+end
