@@ -7,12 +7,12 @@ class UsersController < ApplicationController
 
     def create
         user = User.create(user_params)
-        reder :json => user
+        render :json => user
     end
 
     private
 
     def user_params
-        params.require(:user).permit(:name, :email, :short_bio)
+        params.require(:user).permit(:name, :email, :short_bio, :img)
     end
 end

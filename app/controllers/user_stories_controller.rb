@@ -1,2 +1,3 @@
 class UserStoriesController < ApplicationController
+    
 end
