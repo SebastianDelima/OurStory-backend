@@ -3,6 +3,7 @@ class CreateStoryPoints < ActiveRecord::Migration[6.0]
     create_table :story_points do |t|
       t.integer :user_id
       t.integer :story_id
+      t.string  :user_name
       t.string :content
 
       t.timestamps
