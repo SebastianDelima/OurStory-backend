@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 2020_01_28_224412) do
   create_table "story_points", force: :cascade do |t|
     t.integer "user_id"
     t.integer "story_id"
+    t.string "user_name"
     t.string "content"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
