@@ -5,6 +5,10 @@ class StoryPointsController < ApplicationController
         render :json => story_point
     end
 
+    def update
+        
+    end
+
     private
 
     def story_points_params
