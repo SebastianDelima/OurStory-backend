@@ -2,7 +2,7 @@ class UsersController < ApplicationController
 
     def index
         users = User.all
-        render :json => users
+        render json: users.to_json(serialized_data)
     end
 
     def create
@@ -11,6 +11,16 @@ class UsersController < ApplicationController
     end
 
     private
+
+    def serialized_data 
+
+        {
+            :include => [
+                :stories
+            ]
+        }
+
+    end
 
     def user_params
         params.require(:user).permit(:name, :email, :short_bio, :img)
