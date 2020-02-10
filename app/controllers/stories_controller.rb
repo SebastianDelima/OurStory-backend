@@ -10,6 +10,13 @@ class StoriesController < ApplicationController
         render :json => story
     end
 
+    def update
+
+       story =  Story.update(params[:id], completed: true)
+       render json: story
+
+    end
+
     private
     
     def serialized_data
