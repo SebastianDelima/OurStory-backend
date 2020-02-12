@@ -7,7 +7,13 @@ class UsersController < ApplicationController
 
     def create
         user = User.create(user_params)
-        render :json => user
+        render json: user.to_json(serialized_data)
+    end
+
+    def show
+       
+        user = User.find_by id: params[:id]
+        render json: user.to_json(serialized_data)
     end
 
     private
@@ -16,7 +22,9 @@ class UsersController < ApplicationController
 
         {
             :include => [
-                :stories
+                :stories,
+                :friendships,
+                :friend_requests_as_receiver
             ]
         }
 
