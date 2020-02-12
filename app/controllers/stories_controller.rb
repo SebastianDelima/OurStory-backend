@@ -11,10 +11,14 @@ class StoriesController < ApplicationController
     end
 
     def update
-
        story =  Story.update(params[:id], completed: true)
        render json: story
+    end
 
+    def destroy
+       
+        story = Story.find_by id: params[:id]
+        story.destroy
     end
 
     private
