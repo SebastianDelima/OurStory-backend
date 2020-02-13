@@ -6,6 +6,7 @@ class StoriesController < ApplicationController
     end
     
     def create
+        
         story = Story.create(story_params)
         render :json => story
     end
@@ -16,8 +17,17 @@ class StoriesController < ApplicationController
     end
 
     def destroy
-       
+
+        arr = []
         story = Story.find_by id: params[:id]
+        user_story = UserStory.find_by id: params[:user_story_id]
+
+         UserStory.all.each{|user_story|
+            if user_story[:story_id] == params[:user_story_id]
+            user_story.destroy
+            end
+         }
+
         story.destroy
     end
 

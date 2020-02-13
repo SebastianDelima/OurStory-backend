@@ -1,5 +1,10 @@
 class FriendRequestsController < ApplicationController
 
+    def index
+        requests = FriendRequest.all
+        render json: requests
+    end
+
     def create
          FriendRequest.create(request_params)      
     end

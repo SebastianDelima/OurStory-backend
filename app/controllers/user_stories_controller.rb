@@ -6,6 +6,7 @@ class UserStoriesController < ApplicationController
     end
 
     def create
+       
         user_story = UserStory.create(user_story_params)
         render :json => user_story
     end
