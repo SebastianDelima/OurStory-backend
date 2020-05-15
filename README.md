@@ -1,24 +1,3 @@
-# README
+Our Story
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+A Story Writing Web-App where users can write stories with other friends simultaneously but can’t edit each other’s paragraphs when finished users can publish their stories so everyone in the app can read them.
